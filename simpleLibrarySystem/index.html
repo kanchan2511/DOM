@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library Management</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Simple Library System</h1>
+    </header>
+    <main>
+      <div class="button-container">
+        <button id="toggle" class="toggleBtn">Add New Book</button>
+      </div>
+      <section class="add-book" style="display: none;">
+        <h2>Add New Book</h2>
+        <form id="book-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="title">Title:</label>
+              <input type="text" id="title" required="">
+            </div>
+            <div class="form-group">
+              <label for="author">Author:</label>
+              <input type="text" id="author" required="">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="type">Book Type:</label>
+            <select id="type">
+              <option value="physical">Physical Book</option>
+              <option value="ebook">E-Book</option>
+            </select>
+          </div>
+          <div id="ebook-details" class="form-group" style="display: none">
+            <label for="fileSize">File Size (MB):</label>
+            <input type="number" id="fileSize" min="1" value="1">
+          </div>
+          <button type="submit" class="btn-primary">Add Book</button>
+        </form>
+      </section>
+
+
+      <section class="library-section">
+        <h2>Book Collection</h2>
+
+        <div id="book-list" class="book-grid">
+          <div class="book-card " data-id="mcrtk1yygljf6">
+            <h3 class="book-title">1984</h3>
+            <div class="book-meta">Author: George Orwell</div>
+            <div class="book-meta">
+              Status: Available
+            </div>
+            <div class="book-actions">
+              <button class="btn btn-borrow">Borrow</button>
+              <button class="btn btn-remove">Remove</button>
+            </div>
+          </div>
+
+          <div class="book-card " data-id="mcrtk1yyli5oh">
+            <h3 class="book-title">The Great Gatsby</h3>
+            <div class="book-meta">Author: F. Scott Fitzgerald</div>
+            <div class="book-meta status">
+              Status: Available
+            </div>
+            <div class="book-actions">
+              <button class="btn btn-borrow">Borrow</button>
+              <button class="btn btn-remove">Remove</button>
+            </div>
+          </div>
+
+          <div class="book-card " data-id="mcrtk1yyj5ta7">
+            <h3 class="book-title">Pride and Prejudice</h3>
+            <div class="book-meta">Author: Jane Austen</div>
+            <div class="book-meta">
+              Status: Available
+            </div>
+            <div class="book-actions">
+              <button class="btn btn-borrow">Borrow</button>
+              <button class="btn btn-remove">Remove</button>
+            </div>
+          </div>
+
+          <div class="book-card ebook" data-id="mcrtk1yy0u5mp">
+            <h3 class="book-title">The Digital Age</h3>
+            <div class="book-meta">Author: Mark Stevenson</div>
+            <div class="book-meta">File Size: 3.5 MB</div>
+            <div class="book-meta">
+              Status: Available
+            </div>
+            <div class="book-actions">
+              <button class="btn btn-borrow">Download</button>
+              <button class="btn btn-remove">Remove</button>
+            </div>
+          </div>
+
+          <div class="book-card ebook" data-id="mcrtk1yy5bwaf">
+            <h3 class="book-title">Programming Basics</h3>
+            <div class="book-meta">Author: John Smith</div>
+            <div class="book-meta">File Size: 8.2 MB</div>
+            <div class="book-meta">
+              Status: Available
+            </div>
+            <div class="book-actions">
+              <button class="btn btn-borrow">Download</button>
+              <button class="btn btn-remove">Remove</button>
+            </div>
+          </div>
+
+          <div class="book-card ebook" data-id="mcrtk1yyfkste">
+            <h3 class="book-title">Artificial Intelligence</h3>
+            <div class="book-meta">Author: Alan Turing</div>
+            <div class="book-meta">File Size: 5.7 MB</div>
+            <div class="book-meta">
+              Status: Available
+            </div>
+            <div class="book-actions">
+              <button class="btn btn-borrow">Download</button>
+              <button class="btn btn-remove">Remove</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
